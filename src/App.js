@@ -3,6 +3,8 @@ import './App.css';
 import FeaturedHeroes from './Components/FeaturedHeroes/FeaturedHeroes';
 import Nav from './Components/Nav/Nav';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import SearchView from './Components/SearchView/SearchView';
+import HeroDetails from './Components/HeroDetails/HeroDetails';
 
 function App() {
   return (
@@ -13,8 +15,8 @@ function App() {
         <div className='container'>
           <Routes>
             <Route exact path='/' element={<FeaturedHeroes />} />
-            <Route path='/search/:name' element={<FeaturedHeroes />} />
-            <Route path='/hero/:id' element={<FeaturedHeroes />} />
+            <Route path='/search/:name' element={<SearchView />} />
+            <Route path='/hero/:id' element={<HeroDetails />} />
             <Route path="*" element={<FeaturedHeroes/>}/>
           </Routes>
         </div>

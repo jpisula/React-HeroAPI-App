@@ -9,3 +9,7 @@ export const getBasicHeroInfoById = async id => {
     
     return { name: powerstats.name, powerstats, imgUrl: image.url };
 }
+
+export const searchHeroesByName = name => {
+    return axios.get(`${API_URL}/search/${name}`);
+}
